@@ -1,0 +1,131 @@
+@import url("first.CSS");
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: fit-content;
+  }
+  
+
+  
+  /* Style the header */
+  header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 20%;
+    height: 600px; /* only for demonstration, should be removed */
+    background: black;
+    padding: 20px;
+  }
+
+
+  
+  /* Style the list inside the menu */
+  button {
+   background-color: white;
+   border-radius: 20px;
+   color: orangered;
+   margin-left: 150px;
+   margin-top: 20px;
+   padding:10px;
+   cursor: pointer;
+  }
+
+  textarea {
+    background-color: white;
+    color: black;
+  }
+  
+  article {
+    display: flex;
+    float: left;
+    padding: 120px;
+    height: 600px;
+    width: 60%;
+    background-color: black;
+    color: white;
+  }
+
+  article .first-profile input, .second-profile input {
+    background-color: white;
+    padding-left: 0px;
+    color: black;
+  }
+  
+
+  article .first-profile .textbox, .second-profile .textbox{
+     color: white;
+  }
+
+  .first-profile{
+    float: left;
+  }
+  
+  .second-profile {
+    margin-left: 100px;
+    float: left;
+  }
+  .right-nav{
+    float: left;
+    width: 20%;
+    height: 600px; /* only for demonstration, should be removed */
+    background: black;
+    padding: 20px;
+  }
+
+.right-nav .outbox input{
+  background-color: white;
+  color: black;
+  padding-left: 2px;
+  margin-top: 5px;
+}
+
+  .post-btn{
+    padding: 0px;
+    margin-left: 0px;
+    color: orangered;
+    background-color: white;
+  }
+  /* Clear floats after the columns */
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color:black;
+    padding: 10px;
+    text-align: center;
+    color: orangered;
+    margin-bottom: 0%;
+    
+  }
+  
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (max-width:560px){
+    .about-body-content{
+        color:red;
+        font-size:10px;
+    }
+
+}

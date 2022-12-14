@@ -1,0 +1,14 @@
+@import url("first.CSS");
+
+.history{
+    background-color: orangered;
+}
+
+
+@media (max-width:560px){
+    .about-body-content{
+        color:red;
+        font-size:10px;
+    }
+
+}

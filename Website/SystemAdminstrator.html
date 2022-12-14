@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Adminstrator</title>
+    <link href="first.CSS" rel="stylesheet" type="text/css">
+
+
+    <style>
+        .sa-introductory{
+            background-color: black;
+            color: white;
+            height: 500px;
+            text-align: center;
+            color: white;
+        }
+        .top-part .text-wrapper{
+            grid-template-columns: 1fr 1fr;
+            color: aqua;
+            float: right;
+            padding-right: 150px;
+        }
+
+        h1{
+            color: white;
+        }
+        .picture{
+            background-color: black;
+        }
+        .picture-wrapper{
+            float: left;
+            height: 50px;
+        }
+
+        .profile-info{
+            background-color: black;
+            color: white;
+            margin-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+        }
+
+
+        #post{
+            /* background-color: white; */
+            color: orangered;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .comment{
+            background-color: black;
+            color: white;
+            padding-bottom: 10px;
+            padding-left: 450px;
+        }
+
+        .comment input {
+            background-color: white;
+        }
+
+        .footer{
+            background-color: black;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="navigation-bar">
+        <div class="right-nav-bar">
+            <div class="left-link-nav">
+                <a href="index.html"><span class="nav-hover-span"></span>Home</a>
+            </div>
+            <div class="right-link-nav">
+                <div class="dropdown">
+                    <span><span class="nav-hover-span"></span>Services</span>
+                    <div class="dropdown-content">
+                        <div class="link-wrapper">
+                            <ul>
+                                <li>
+                                    <div class="link1">
+                                        <a href="SystemAdminstrator.html"><span class="nav-hover-span"></span> System</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="link2">
+                                        <a href="NetworkAdminstrator.html"><span class="nav-hover-span"></span>Network</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="link3">
+                                        <a href="CommunicationAndInformation.html"><span class="nav-hover-span"></span>Communication and Network</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            
+                            
+                        </div>
+                        
+
+
+                    </div>
+                </div>
+            </div>     
+            <div class="right-right-link-nav">
+                <a  href="about.html"><span class="nav-hover-span"></span>About</a>
+            </div>
+        </div>
+        
+        <div class="left-nav-bar">
+            <a href="signinhtml.php"><span class="nav-hover-span"></span>Sign In</a>
+            
+        </div>
+    </div>
+
+    <div class="sa-introductory">
+        <div class="history">
+
+            <h1>vision</h1>
+            <p>-> Build a zonal accredited and inclusive ICT center<br>
+                -> To see the ICT Center as the leading and most popular development information
+                exchange center in the country.
+            </p>
+
+        </div>
+
+        <div class="aim">
+            <h1>aim</h1>
+            <p>-> Provide an inclusive and internet service.<br>
+                -> To create a feedback loop to effectively use media technology and to collect, send, and
+                organize sufficient information for regional political, economic, and social mobilization
+            </p>
+        </div>
+
+        <div class="achievement">
+             <h1>Objective</h1>
+             <p>-> Make a difference in the basic ICT applications that the country follows.<br>
+                -> To create a strong collaboration or technology with the public.<br>
+                -> Provide the community with ICT-supported services<br>
+            </p>
+        </div>
+              
+        <div class="post-body">
+            <h1>News Update</h1>
+            <div id="post">
+                
+    
+            </div>
+            <script>
+                var b =localStorage.getItem("myValue");
+                document.getElementById("post").innerHTML = b;
+                // alert("The Value Received is " + b);
+                // var resetValue = "";
+                // localStorage.setItem("myValue", resetValue);
+            </script>
+        </div>
+       
+
+    </div>
+    
+
+    <div class="comment">
+        <div class="text-area">
+            <form action="#">
+                <textarea name="" id="customer-textarea" cols="50" rows="10" placeholder="Description"></textarea>
+                <br>
+                <button type="submit" onclick="Comment()">Send</button>
+                <script>
+                    function Comment() {
+                        var c = document.getElementById("customer-textarea").value;
+                        localStorage.setItem("sacomment", c);
+                        //window.location.href = "saupdate.html";
+                        
+                    }
+                </script>
+            </form>
+            
+        </div>
+    </div>
+ </div>
+
+
+ <div class="footer">
+    <h5>Contact Us On</h5>
+    
+    <div class="social">
+        
+            <a href="www.facebook.com">facebook</a><br>
+            <a href="youtube.com">youtube</a><br>
+            <a href="twitter.com">twitter</a><br>
+        
+    </div>
+    <div class="text">
+        <p>All rights reserved,2021, Ethiopia Amhara Region, Debre markos</p>
+    </div>
+</div>
+
+</body>
+</html>

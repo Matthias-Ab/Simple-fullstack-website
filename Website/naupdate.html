@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Network Adminstrator profile</title>
+        <link rel="stylesheet" href="update.css">
+    </head>
+
+    <body>
+
+
+        <header>
+            <div class="signin-container">
+                <div class="navigation-bar">
+                    <div class="right-nav-bar">
+                        <div class="left-link-nav">
+                            <a href="index.html"><span class="nav-hover-span"></span>Home</a>
+                        </div>
+                        <div class="right-link-nav">
+                            <div class="dropdown">
+                                <span><span class="nav-hover-span"></span>Services</span>
+                                <div class="dropdown-content">
+                                    <div class="link-wrapper">
+                                        <ul>
+                                            <li>
+                                                <div class="link1">
+                                                    <a href="SystemAdminstrator.html"><span class="nav-hover-span"></span> System</a>
+                                                </div>
+                                            </li>
+    
+                                            <li>
+                                                <div class="link2">
+                                                    <a href="NetworkAdminstrato.html"><span class="nav-hover-span"></span>Network</a>
+                                                </div>
+                                            </li>
+    
+                                            <li>
+                                                <div class="link3">
+                                                    <a href="CommunicationAndInformation.html"><span class="nav-hover-span"></span>Communication and Network</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+    
+    
+                                </div>
+                            </div>
+                        </div>     
+                        <div class="right-right-link-nav">
+                            <a  href="about.html"><span class="nav-hover-span"></span>About</a>
+                        </div>
+                    </div>
+                    
+                    <div class="left-nav-bar">
+                        <a href="index.html"><span class="nav-hover-span"></span>Log Out</a>
+                        
+                    </div>
+                </div>
+             
+        </header>
+        
+        <section>
+          <nav>
+            <div class="post">
+                
+                <form action="">
+                    <textarea name="" id="textarea" cols="30" rows="25" placeholder="Description"></textarea>
+                    <button onclick="post()">Post</button>
+                </form>
+                <script>
+                    function post() {
+                        var a = document.getElementById("textarea").value;
+                        localStorage.setItem("naValue", a);
+                        window.location.href = "SystemAdminstrator.html";
+                    }
+               </script>
+            </div>
+          </nav>
+          
+          <article>
+
+                <form action="naupdate.php" method="post">
+                    <div class="first-profile">
+                         <div class="textbox">
+                         
+                            Enter Id number: <input type="text"  name="id" required>
+                          </div>
+                         <div class="textbox">
+                            First Name:  <input type="text"  name="firstname" required>
+                         </div>
+                         <div class="textbox">
+                            Middle Name: <input type="text"  name="middlename" required>
+                         </div>
+                         <div class="textbox">
+                            Last Name:  <input type="text"   name="lastname" required>
+                         </div>
+                         <div class="textbox">
+                            Email:      <input type="email"  name="email" required>
+                         </div>
+                    </div>
+                    <div class="second-profile">
+                        
+                        <div class="textbox">
+                            User Name: <input type="text"  name="username" required>
+                        </div>
+                        <div class="textbox">
+                           Password:  <input type="password"  name="password" required>
+                        </div>
+                        <div class="textbox">
+                            Age: <input type="text"  name="age" required>
+                        </div>
+                        <div class="textbox">
+                            Sex: <input type="text"  name="sex" required>
+                        </div>
+                        <button class="profile-btn" type="submit" name="Update" value="Update"><span class="profile-span"></span>Update</button>
+                    </div>
+                </form>
+           
+          </article>
+
+          <nav class="right-nav">
+            <div class="inbox">
+                <textarea name="inbox" id="inbox-textarea" cols="30" rows="25"></textarea>
+                <script>
+                  var d =localStorage.getItem("nacomment");
+                  document.getElementById("inbox-textarea").innerHTML = d;
+                  // alert("The Value Received is " + b);
+                 //  var resetValue = "";
+                 //  localStorage.setItem("myValue", resetValue);
+              </script>
+            </div>
+            <div class="outbox">
+                <input type="text" name="outbox" placeholder="Message" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <button type="submit">Send</button>
+            </div>
+        </nav>
+        </section>
+        
+        <div class="footer">
+            <h5>Contact Us On</h5>
+            
+            <div class="social">
+                
+                    <a href="www.facebook.com">facebook</a><br>
+                    <a href="youtube.com">youtube</a><br>
+                    <a href="twitter.com">twitter</a><br>
+                
+            </div>
+            <div class="text">
+                <p>All rights reserved,2021, Ethiopia Amhara Region, Debre markos</p>
+            </div>
+        </div>
+        
+        </body>
+        <style>
+            .footer{
+                background-color: black;
+            }
+        </style>
+        
+</html>
+
+
+
+
+
+
+

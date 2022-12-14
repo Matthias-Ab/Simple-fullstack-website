@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Add User</title>
+        <link rel="stylesheet" href="first.css">
+    </head>
+         
+    <style>
+        .textbox input{
+            color: black;
+            font-size: bold;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="signin-container">
+                <div class="navigation-bar">
+                    <div class="right-nav-bar">
+                        <div class="left-link-nav">
+                            <a href="index.html"><span class="nav-hover-span"></span>Home</a>
+                        </div>
+                        <div class="right-link-nav">
+                            <div class="dropdown">
+                                <span><span class="nav-hover-span"></span>Services</span>
+                                <div class="dropdown-content">
+                                    <div class="link-wrapper">
+                                        <ul>
+                                            <li>
+                                                <div class="link1">
+                                                    <a href="SystemAdminstrator.html"><span class="nav-hover-span"></span> System</a>
+                                                </div>
+                                            </li>
+    
+                                            <li>
+                                                <div class="link2">
+                                                    <a href="NetworkAdminstrato.html"><span class="nav-hover-span"></span>Network</a>
+                                                </div>
+                                            </li>
+    
+                                            <li>
+                                                <div class="link3">
+                                                    <a href="CommunicationAndInformation.html"><span class="nav-hover-span"></span>Communication and Network</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+    
+    
+                                </div>
+                            </div>
+                        </div>     
+                        <div class="right-right-link-nav">
+                            <a  href="about.html"><span class="nav-hover-span"></span>About</a>
+                        </div>
+                    </div>
+                    
+                    <div class="left-nav-bar">
+                        <a href="index.html"><span class="nav-hover-span"></span>Log Out</a>
+                        
+                    </div>
+                </div>
+    
+        
+                    
+                </div>
+        <div class="register-user">
+            <div class="profile">
+
+                <form action="add.php" method="post" autocomplete="off">
+                    <div class="textbox">
+                       First Name:  <input type="text"  name="firstname" required>
+                    </div>
+                    <div class="textbox">
+                       Middle Name: <input type="text"  name="middlename" required>
+                    </div>
+                    <div class="textbox">
+                       Last Name:  <input type="text"   name="lastname" required>
+                    </div>
+                    <div class="textbox">
+                       Email:      <input type="email"  name="email" required>
+                    </div>
+                    <div class="textbox">
+                        User Name: <input type="text"  name="username" required>
+                    </div>
+                    <div class="textbox">
+                       Password:  <input type="password"  name="password" required>
+                    </div>
+                    <div class="textbox">
+                        Age: <input type="text"  name="age" required>
+                    </div>
+                    <div class="textbox">
+                        Sex: <input type="text"  name="sex" required>
+                    </div>
+                    <div class="textbox">
+                            <input type="radio" name="job" value="teamleader" checked> Team Leader      <br>
+                            <input type="radio" name="job" value="systemadminstrator"> System Adminstrator<br>
+                            <input type="radio" name="job" value="networkadminstrator">Network Adminstrator<br>
+                            <input type="radio" name="job" value="communicationandinformation">Communication And Information
+                    </div>
+                    <!-- <input type="submit" name="submit" value="Register"> -->
+                    <button class="profile-btn" type="submit" name="submit"><span class="profile-span"></span>Register</button>
+                </form>
+            </div>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
+
+
+<!-- <?php
+
+
+
+if (isset($_POST['submit'])) {
+   $fname =$_POST['firstname'];
+   $mname =$_POST['middlename'];
+   $lname =$_POST['lastname'];
+   $username =$_POST['username'];
+   $email = $_POST['email'];
+   $password = md5($_POST['password']);
+   $sex =$_POST['sex']; 
+   $age = $_POST['age'];
+   $tablename = $_POST['job'];
+
+
+   $sql = "INSERT INTO $tablename SET
+         fname='$fname',mname = '$mname',lname='$lname',
+         username='$username',email='$email',password='$password',
+         sex='$sex',age='$age'";
+
+
+    $conn = mysqli_connect('localhost', 'root', '')or die(mysqli_error());
+    $db = mysqli_select_db($conn, 'ict') or die(mysqli_error());
+    $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    if ($res==true) {
+        
+    }else {
+        
+    }
+}
+
+
+
+?>
+ -->
